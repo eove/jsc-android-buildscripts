@@ -1,0 +1,12 @@
+diff -aur target-org/webkit/Source/JavaScriptCore/runtime/Options.h target/webkit/Source/JavaScriptCore/runtime/Options.h
+--- target-org/webkit/Source/JavaScriptCore/runtime/Options.h	2020-11-02 14:19:51.356658611 +0100
++++ target/webkit/Source/JavaScriptCore/runtime/Options.h	2020-11-02 14:19:29.432662959 +0100
+@@ -218,7 +218,7 @@
+     v(bool, alwaysComputeHash, false, Normal, nullptr) \
+     v(bool, testTheFTL, false, Normal, nullptr) \
+     v(bool, verboseSanitizeStack, false, Normal, nullptr) \
+-    v(bool, useGenerationalGC, true, Normal, nullptr) \
++    v(bool, useGenerationalGC, false, Normal, nullptr) \
+     v(bool, useConcurrentBarriers, true, Normal, nullptr) \
+     v(bool, useConcurrentGC, true, Normal, nullptr) \
+     v(bool, collectContinuously, false, Normal, nullptr) \

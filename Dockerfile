@@ -4,6 +4,8 @@ ENV NDK_VERSION r17c
 ENV SDK_VERSION sdk-tools-linux-3859397.zip
 ENV ANDROID_HOME /build/android-sdk
 ENV ANDROID_NDK /build/android-ndk
+ENV ANDROID_BUILD_TOOLS_VERSION 28.0.3
+ENV ANDROID_PLATFORM_VERSION 28
 ENV PYTHON_VERSION 3.5.2
 
 WORKDIR /build
@@ -44,11 +46,9 @@ RUN sdkmanager \
   "extras;google;m2repository" \
   "extras;google;google_play_services"
 
-RUN sdkmanager \
-  "build-tools;25.0.3" \
-  "build-tools;27.0.3"
+RUN sdkmanager "build-tools;${ANDROID_BUILD_TOOLS_VERSION}"
 
-RUN sdkmanager "platforms;android-27"
+RUN sdkmanager "platforms;android-${ANDROID_PLATFORM_VERSION}"
 
 RUN mkdir /tmp/android-ndk-tmp && \
   cd /tmp/android-ndk-tmp && \
@@ -58,9 +58,7 @@ RUN mkdir /tmp/android-ndk-tmp && \
   cd ${ANDROID_NDK} && \
   rm -rf /tmp/android-ndk-tmp
 
-RUN sdkmanager \
-  "lldb;3.0" \
-  "cmake;3.6.4111459"
+RUN sdkmanager "cmake;3.6.4111459"
 
 COPY . .
 

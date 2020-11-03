@@ -56,8 +56,10 @@ JSC_PATCHSET=(
   # Workaround JIT crash on arm64, especially for Saumsung S7 Edge
   "jsc_fix_arm64_jit_crash.patch"
 
-  # Eove heap patch
+  # Eove patches
   "jsc_eove_heap.patch"
+  # "jsc_eove_disable_generationalgc.patch"
+  #"jsc_eove_force_ramsize.patch"
 )
 
 if [[ "$I18N" = false ]]

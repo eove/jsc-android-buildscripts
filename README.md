@@ -1,3 +1,7 @@
+Please see the [fork readme](./README_FORK.md).
+
+Original readme below:
+
 [![npm version](https://badge.fury.io/js/jsc-android.svg)](https://badge.fury.io/js/jsc-android)
 [![CircleCI](https://circleci.com/gh/react-native-community/jsc-android-buildscripts.svg?style=svg)](https://circleci.com/gh/react-native-community/jsc-android-buildscripts)
 

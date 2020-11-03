@@ -1,4 +1,3 @@
-diff -aur target-org/webkit/Source/JavaScriptCore/heap/Heap.cpp target/webkit/Source/JavaScriptCore/heap/Heap.cpp
 --- target-org/webkit/Source/JavaScriptCore/heap/Heap.cpp	2020-02-26 12:00:56.152203016 +0100
 +++ target/webkit/Source/JavaScriptCore/heap/Heap.cpp	2020-02-25 18:02:15.123015000 +0100
 @@ -497,7 +497,7 @@
